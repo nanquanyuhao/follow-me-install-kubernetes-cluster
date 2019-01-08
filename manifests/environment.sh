@@ -15,25 +15,25 @@ export CLUSTER_CIDR="172.30.0.0/16"
 export NODE_PORT_RANGE="8400-9000"
 
 # 集群各机器 IP 数组
-export NODE_IPS=(172.27.129.105 172.27.129.111 172.27.129.112)
+export NODE_IPS=(192.168.235.123 192.168.235.124 192.168.235.125)
 
 # 集群各 IP 对应的 主机名数组
 export NODE_NAMES=(kube-node1 kube-node2 kube-node3)
 
 # kube-apiserver 的 VIP（HA 组件 keepalived 发布的 IP）
-export MASTER_VIP=172.27.129.253
+export MASTER_VIP=192.168.235.126
 
 # kube-apiserver VIP 地址（HA 组件 haproxy 监听 8443 端口）
 export KUBE_APISERVER="https://${MASTER_VIP}:8443"
 
 # HA 节点，配置 VIP 的网络接口名称
-export VIP_IF="eth0"
+export VIP_IF="ens33"
 
 # etcd 集群服务地址列表
-export ETCD_ENDPOINTS="https://172.27.129.105:2379,https://172.27.129.111:2379,https://172.27.129.112:2379"
+export ETCD_ENDPOINTS="https://192.168.235.123:2379,https://192.168.235.124:2379,https://192.168.235.125:2379"
 
 # etcd 集群间通信的 IP 和端口
-export ETCD_NODES="kube-node1=https://172.27.129.105:2380,kube-node2=https://172.27.129.111:2380,kube-node3=https://172.27.129.112:2380"
+export ETCD_NODES="kube-node1=https://192.168.235.123:2380,kube-node2=https://192.168.235.124:2380,kube-node3=https://192.168.235.125:2380"
 
 # flanneld 网络配置前缀
 export FLANNEL_ETCD_PREFIX="/kubernetes/network"
