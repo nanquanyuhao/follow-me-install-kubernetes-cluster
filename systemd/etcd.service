@@ -20,12 +20,12 @@ ExecStart=/opt/k8s/bin/etcd \
   --peer-trusted-ca-file=/etc/kubernetes/cert/ca.pem \
   --peer-client-cert-auth \
   --client-cert-auth \
-  --listen-peer-urls=https://172.27.129.105:2380 \
-  --initial-advertise-peer-urls=https://172.27.129.105:2380 \
-  --listen-client-urls=https://172.27.129.105:2379,http://127.0.0.1:2379 \
-  --advertise-client-urls=https://172.27.129.105:2379 \
+  --listen-peer-urls=https://192.168.235.123:2380 \
+  --initial-advertise-peer-urls=https://192.168.235.123:2380 \
+  --listen-client-urls=https://192.168.235.123:2379,http://127.0.0.1:2379 \
+  --advertise-client-urls=https://192.168.235.123:2379 \
   --initial-cluster-token=etcd-cluster-0 \
-  --initial-cluster=kube-node1=https://172.27.129.105:2380,kube-node2=https://172.27.129.111:2380,kube-node3=https://172.27.129.112:2380 \
+  --initial-cluster=kube-node1=https://192.168.235.123:2380,kube-node2=https://192.168.235.124:2380,kube-node3=https://192.168.235.125:2380 \
   --initial-cluster-state=new
 Restart=on-failure
 RestartSec=5
