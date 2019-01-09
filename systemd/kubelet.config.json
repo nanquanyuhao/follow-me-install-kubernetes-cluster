@@ -20,7 +20,7 @@
       "cacheUnauthorizedTTL": "30s"
     }
   },
-  "address": "172.27.129.111",
+  "address": "192.168.235.124",
   "port": 10250,
   "readOnlyPort": 0,
   "cgroupDriver": "cgroupfs",
